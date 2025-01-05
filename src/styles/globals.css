@@ -150,9 +150,6 @@
   color: #ff0000;
 }
 
-/* Keep all your existing CSS and add these responsive styles at the bottom */
-
-/* Medium screens */
 @media (max-width: 768px) {
   .container {
     max-width: 100%;
@@ -166,7 +163,6 @@
   }
 }
 
-/* Small screens */
 @media (max-width: 576px) {
   .form-group {
     flex-direction: column;
@@ -205,7 +201,6 @@
   }
 }
 
-/* Extra small screens */
 @media (max-width: 360px) {
   .filters {
     flex-direction: column;
@@ -226,13 +221,12 @@
   }
 }
 
-/* Improved touch targets for mobile */
 @media (max-width: 768px) {
   .button,
   .filter-button,
   .edit-button,
   .delete-button {
-    min-height: 44px; /* Better touch target size */
+    min-height: 44px;
   }
 
   .check-button {
@@ -246,7 +240,6 @@
   }
 }
 
-/* Add smooth transitions */
 .todo-item,
 .button,
 .filter-button,
@@ -256,7 +249,6 @@
   transition: all 0.2s ease;
 }
 
-/* Focus states for accessibility */
 .input:focus,
 .select:focus,
 .button:focus,
