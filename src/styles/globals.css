@@ -1,0 +1,269 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333333;
+}
+
+.form-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input,
+.select {
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  flex: 1;
+}
+
+.button {
+  padding: 10px 15px;
+  font-size: 15px;
+  background: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #0056b3;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-button {
+  padding: 8px 12px;
+  background: #f0f0f0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filter-button.active {
+  background: #007bff;
+  color: #ffffff;
+}
+
+.no-tasks {
+  text-align: center;
+  color: #888888;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #eeeeee;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.todo-item.completed {
+  background: #f9f9f9;
+}
+
+.todo-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.check-button {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #cccccc;
+  border-radius: 50%;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.check-button.completed {
+  background: #28a745;
+  border-color: #28a745;
+}
+
+.todo-text.strike-through {
+  text-decoration: line-through;
+  color: #999999;
+}
+
+.priority-high {
+  color: #ff0000;
+}
+
+.priority-medium {
+  color: #ffa500;
+}
+
+.priority-low {
+  color: #008000;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-button,
+.delete-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.edit-button {
+  color: #007bff;
+}
+
+.delete-button {
+  color: #ff0000;
+}
+
+/* Keep all your existing CSS and add these responsive styles at the bottom */
+
+/* Medium screens */
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    margin: 0;
+    border-radius: 0;
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+}
+
+/* Small screens */
+@media (max-width: 576px) {
+  .form-group {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .input,
+  .select,
+  .button {
+    width: 100%;
+  }
+
+  .todo-item {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+  .todo-content {
+    flex-wrap: wrap;
+  }
+
+  .actions {
+    justify-content: flex-end;
+    padding-top: 10px;
+    border-top: 1px solid #eeeeee;
+  }
+
+  .filters {
+    flex-wrap: wrap;
+  }
+
+  .filter-button {
+    flex: 1;
+    min-width: 100px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 360px) {
+  .filters {
+    flex-direction: column;
+  }
+
+  .filter-button {
+    width: 100%;
+  }
+
+  .todo-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .check-button {
+    align-self: flex-start;
+  }
+}
+
+/* Improved touch targets for mobile */
+@media (max-width: 768px) {
+  .button,
+  .filter-button,
+  .edit-button,
+  .delete-button {
+    min-height: 44px; /* Better touch target size */
+  }
+
+  .check-button {
+    width: 24px;
+    height: 24px;
+  }
+
+  .edit-button,
+  .delete-button {
+    padding: 8px;
+  }
+}
+
+/* Add smooth transitions */
+.todo-item,
+.button,
+.filter-button,
+.check-button,
+.edit-button,
+.delete-button {
+  transition: all 0.2s ease;
+}
+
+/* Focus states for accessibility */
+.input:focus,
+.select:focus,
+.button:focus,
+.filter-button:focus,
+.check-button:focus,
+.edit-button:focus,
+.delete-button:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
